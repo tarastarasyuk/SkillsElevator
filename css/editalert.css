@@ -1,0 +1,41 @@
+.swal2-popup .swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background-color: #91D00F;
+    color: #37237A;
+    font-weight: 500;
+  }
+
+  button:focus{
+    outline: none;
+  }
+.swal2-popup{
+  background-color: #3d2688;
+  animation-name: rotate12;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes rotate12 {
+  from{
+    /* background-color: red; */
+    transform: rotate(-0.5deg);
+  }
+  to{
+    /* background-color: blue; */
+    transform: rotate(0.5deg);
+  }
+}
+#swal2-content{
+  color: #fff;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+#swal2-title{
+  color: #fff;
+  font-weight: 900;
+  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}

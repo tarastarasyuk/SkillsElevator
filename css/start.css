@@ -1,0 +1,262 @@
+*{
+  box-sizing: border-box;
+  color: #91D00F;
+  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+html{
+  overflow: hidden;
+  /* remove scroll */
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #37237A;
+  height: 100vh;
+}
+.content{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.up__title, .down__title{
+  text-align: center;
+  font-weight: 900;
+}
+.up__title{
+  font-size: 140px;
+  padding-top: -60px;
+}
+.down__title{
+  font-size: 48px;
+}
+
+/* ------------------------BUTTON-- */
+.button__wrap{
+  width: 400px;
+  height: 400px;
+  background-image: url("../img/col.png");
+  background-size: 83%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .4s ease;
+}
+
+.button{
+  width: 73%;
+  height: 73%;
+  border-radius: 50%;
+  background-color: #91D00F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: #37237A;
+  font-weight: 900;
+  transition: all .4s ease;
+}
+
+.button__wrap:hover {
+  background-size: 98%;
+
+}
+.button__wrap:hover .button {
+  transform: rotate(360deg);/*rotate text*/
+  width: 88%;
+  height: 88%;
+  font-size: 70px;
+}
+/* ----- */
+
+
+/* ANIMATION */
+.action{
+  animation-name: word21;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.up__title{
+  animation-name: word21;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.down__title{
+  animation-name: word21;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes word21{
+  from{
+    transform: rotate(-0.5deg);
+  }
+  to{
+    transform: rotate(0.5deg);
+  }
+}
+
+
+/* media */
+
+
+@media (max-width: 500px){
+  .up__title{
+    font-size: 108px;
+    margin-top: 20px;
+  }
+  .down__title{
+    font-size: 38px;
+    height: 20%;
+    margin-top: 20px;
+  }
+  .button__wrap{
+    width: 350px;
+    height: 350px;
+  }
+  body{
+    padding: 2px;
+    background-color: #37237A;
+  }
+  .content{
+    margin: 0 auto;
+    /* width: 100vw; */
+  }
+  .wrap{
+    margin: 0 auto;
+  }
+}
+
+/* INTEGRATED */
+.title__up span{
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.title__down span{
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(-1deg);
+  }
+  to{
+    transform: rotate(1deg);
+  }
+}
+
+
+
+/* MEDIA */
+.title__up span{
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.title__down span{
+  animation-name: rotate;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@media (max-width: 500px){
+  .title__up{
+    height: 20%;
+    /* background-color: white; */
+
+    font-size: 108px;
+    text-align: center;
+  }
+  .title__down{
+    height: 10%;
+    /* background-color: blue; */
+
+    font-size: 38px;
+  }
+  .item{
+    width: 130px;
+    height: 130px;
+  }
+  .item span{
+    font-size: 78px;
+  }
+  .item.active:hover span{
+    font-size: 108px;
+  }
+}
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  /* background-color: red; */
+}
+
+.title__up{
+  height: 20%;
+  /* background-color: white; */
+  font-weight: 900;
+  font-size: 140px;
+}
+.map__items{
+  height: 80%;
+  /* background-color: red; */
+}
+.title__down{
+  height: 10%;
+  /* background-color: blue; */
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.title__up,
+.title__down{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-weight: bold; */
+
+  color: #91D00F;
+}
